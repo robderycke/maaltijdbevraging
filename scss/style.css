@@ -1,0 +1,70 @@
+body {
+  background-color: #fffaf0;
+  font-family: "Outfit", sans-serif;
+  color: #3e2723;
+}
+
+.c-card {
+  background: white;
+  border: 3px solid #3e2723;
+  border-radius: 15px 50px 15px 50px/50px 15px 50px 15px;
+  box-shadow: 10px 10px 0px #3e2723;
+}
+
+.c-tabs__link {
+  font-family: "Patrick Hand", cursive;
+  font-size: 1.3rem;
+  color: #3e2723 !important;
+  border: 3px solid #3e2723 !important;
+  border-bottom: none !important;
+  margin-right: 5px;
+  border-radius: 10px 10px 0 0 !important;
+}
+.c-tabs__link.active {
+  background-color: #e67e22 !important;
+  color: white !important;
+}
+
+.c-input-hand {
+  border: 2px solid #3e2723;
+  border-radius: 10px;
+  font-family: "Patrick Hand", cursive;
+  font-size: 1.1rem;
+}
+.c-input-hand:focus {
+  box-shadow: 4px 4px 0 #e67e22;
+  border-color: #e67e22;
+}
+
+.c-btn--handdrawn {
+  background: #e67e22;
+  color: white;
+  border: 3px solid #3e2723;
+  border-radius: 12px;
+  font-family: "Patrick Hand", cursive;
+  font-size: 1.4rem;
+  transition: 0.2s;
+}
+.c-btn--handdrawn:hover {
+  background: #3e2723;
+  transform: translateY(-2px);
+  color: white;
+}
+
+.c-order-item {
+  border-bottom: 2px dashed #3e2723;
+  padding: 1.5rem 0;
+}
+.c-order-item:last-child {
+  border-bottom: none;
+}
+.c-order-item__room {
+  font-family: "Patrick Hand", cursive;
+  font-size: 1.6rem;
+  color: #e67e22;
+  line-height: 1;
+}
+
+.u-rotate-tiny {
+  transform: rotate(-2deg);
+}/*# sourceMappingURL=style.css.map */
