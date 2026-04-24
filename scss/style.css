@@ -5,66 +5,69 @@ body {
 }
 
 .c-card {
-  background: white;
-  border: 3px solid #3e2723;
-  border-radius: 15px 50px 15px 50px/50px 15px 50px 15px;
-  box-shadow: 10px 10px 0px #3e2723;
+  background: #fff;
+  border: 2.5px solid #333;
+  border-radius: 20px;
+  box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.05);
 }
 
-.c-tabs__link {
-  font-family: "Patrick Hand", cursive;
-  font-size: 1.3rem;
-  color: #3e2723 !important;
-  border: 3px solid #3e2723 !important;
-  border-bottom: none !important;
-  margin-right: 5px;
-  border-radius: 10px 10px 0 0 !important;
+/* Tabs Styling - Exact zoals screenshot */
+.nav-tabs {
+  border: none;
+  gap: 5px;
 }
-.c-tabs__link.active {
+.nav-tabs .nav-link {
+  border: 2.5px solid #333 !important;
+  border-radius: 12px 12px 0 0 !important;
+  color: #333;
+  font-family: "Patrick Hand", cursive;
+  font-size: 1.2rem;
+  background: #fff;
+  padding: 8px 20px;
+  transition: 0.2s;
+}
+.nav-tabs .nav-link.active {
   background-color: #e67e22 !important;
-  color: white !important;
+  color: #fff !important;
+  border-bottom: 2.5px solid #e67e22 !important;
+}
+
+.tab-content {
+  border: 2.5px solid #333;
+  border-radius: 0 15px 15px 15px;
+  background: #fff;
+  padding: 25px;
+  margin-top: -2.5px;
 }
 
 .c-input-hand {
-  border: 2px solid #3e2723;
+  border: 1.5px solid #333;
   border-radius: 10px;
-  font-family: "Patrick Hand", cursive;
-  font-size: 1.1rem;
+  padding: 8px;
 }
 .c-input-hand:focus {
-  box-shadow: 4px 4px 0 #e67e22;
   border-color: #e67e22;
+  box-shadow: none;
 }
 
-.c-btn--handdrawn {
-  background: #e67e22;
+.c-btn-main {
+  background-color: #e67e22;
   color: white;
-  border: 3px solid #3e2723;
-  border-radius: 12px;
   font-family: "Patrick Hand", cursive;
-  font-size: 1.4rem;
-  transition: 0.2s;
+  font-size: 1.5rem;
+  border: 2.5px solid #333;
+  border-radius: 15px;
+  box-shadow: 0 5px 0 #333;
+  padding: 12px;
+  width: 100%;
+  transition: all 0.1s;
 }
-.c-btn--handdrawn:hover {
-  background: #3e2723;
-  transform: translateY(-2px);
-  color: white;
+.c-btn-main:hover {
+  background-color: rgb(214.262195122, 113.4329268293, 24.237804878);
+  transform: translateY(2px);
+  box-shadow: 0 3px 0 #333;
 }
-
-.c-order-item {
-  border-bottom: 2px dashed #3e2723;
-  padding: 1.5rem 0;
-}
-.c-order-item:last-child {
-  border-bottom: none;
-}
-.c-order-item__room {
-  font-family: "Patrick Hand", cursive;
-  font-size: 1.6rem;
-  color: #e67e22;
-  line-height: 1;
-}
-
-.u-rotate-tiny {
-  transform: rotate(-2deg);
+.c-btn-main:active {
+  transform: translateY(5px);
+  box-shadow: none;
 }/*# sourceMappingURL=style.css.map */

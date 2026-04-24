@@ -3,56 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WZC Robard | Dagbeheer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>WZC Robard | Beheer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Outfit:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="scss/style.css">
 </head>
-<body class="c-body">
-
-    <header class="c-header py-5 text-center">
-        <div class="container">
-            <h1 class="display-3 fw-bold u-rotate-tiny">WZC Robard</h1>
-            <p class="lead">Dagoverzicht per Kamer</p>
-        </div>
+<body>
+    <header class="py-4 text-center bg-white border-bottom border-3 border-dark mb-4">
+        <h1 class="display-5 fw-bold">WZC Robard</h1>
     </header>
 
     <main class="container mb-5">
-        <div class="row g-5">
-            <div class="col-12 col-lg-7">
-                <section class="c-card p-4">
-                    <h2 class="h3 mb-4">Maaltijden opnemen</h2>
+        <div class="row g-4">
+            <div class="col-lg-7">
+                <div class="c-card p-4 bg-white border border-3 border-dark rounded shadow">
+                    <h2 class="h4 mb-3">Nieuw Dossier</h2>
+                    <input type="text" class="form-control mb-4 js-kamer-input" placeholder="Kamernummer (bv. 1.05)">
                     
-                    <div class="mb-4">
-                        <label class="form-label fw-bold">Kamernummer (V.KK)</label>
-                        <input type="text" class="form-control c-input-hand js-kamer-input" placeholder="bv. 1.05">
-                        <div class="form-text text-accent">Bestaande kamers worden bij opslaan overschreven.</div>
-                    </div>
-
-                    <ul class="nav nav-tabs border-0" id="mealTabs" role="tablist">
-                        <li class="nav-item"><button class="nav-link active c-tabs__link" data-bs-toggle="tab" data-bs-target="#ontbijt">Ontbijt</button></li>
-                        <li class="nav-item"><button class="nav-link c-tabs__link" data-bs-toggle="tab" data-bs-target="#middag">Middag</button></li>
-                        <li class="nav-item"><button class="nav-link c-tabs__link" data-bs-toggle="tab" data-bs-target="#avond">Avond</button></li>
+                    <ul class="nav nav-tabs border-0" role="tablist">
+                        <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#ontbijt">Ontbijt</button></li>
+                        <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#middag">Middag</button></li>
+                        <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#avond">Avond</button></li>
                     </ul>
 
-                    <div class="tab-content p-4 border border-3 border-dark rounded-bottom bg-white">
-                        <div class="tab-pane fade show active js-meal-pane" id="ontbijt" data-meal="ontbijt"></div>
-                        <div class="tab-pane fade js-meal-pane" id="middag" data-meal="middag"></div>
-                        <div class="tab-pane fade js-meal-pane" id="avond" data-meal="avond"></div>
+                    <div class="tab-content p-3 border border-dark rounded-bottom">
+                        <div class="tab-pane fade show active js-meal-pane" id="ontbijt"></div>
+                        <div class="tab-pane fade js-meal-pane" id="middag"></div>
+                        <div class="tab-pane fade js-meal-pane" id="avond"></div>
                     </div>
 
-                    <button class="btn c-btn--handdrawn w-100 mt-4 js-submit-btn">
-                        <i class="bi bi-save2 me-2"></i>Sla Volledig Dossier Op
-                    </button>
-                </section>
+                    <button class="btn btn-dark w-100 mt-4 js-submit-btn py-3 fw-bold">SLA DOSSIER OP</button>
+                </div>
             </div>
 
-            <div class="col-12 col-lg-5">
-                <section class="c-card p-4">
-                    <h2 class="h3 mb-4">Dossiers Vandaag</h2>
+            <div class="col-lg-5">
+                <div class="c-card p-4 bg-white border border-3 border-dark rounded shadow">
+                    <h2 class="h4 mb-3">Overzicht</h2>
                     <div class="js-orders-list"></div>
-                </section>
+                </div>
             </div>
         </div>
     </main>

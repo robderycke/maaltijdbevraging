@@ -1,66 +1,75 @@
 // #region *** SETTINGS ***
 $primary-color: #3e2723;
-$accent-color: #e67e22;
+$accent-color: #e67e22; 
 $bg-color: #fffaf0;
 $font-hand: 'Patrick Hand', cursive;
 $font-body: 'Outfit', sans-serif;
+$border-thickness: 2.5px;
 // #endregion
 
-// #region *** ELEMENTS ***
 body {
     background-color: $bg-color;
     font-family: $font-body;
     color: $primary-color;
 }
-// #endregion
 
-// #region *** COMPONENTS ***
 .c-card {
-    background: white;
-    border: 3px solid $primary-color;
-    border-radius: 15px 50px 15px 50px / 50px 15px 50px 15px;
-    box-shadow: 10px 10px 0px $primary-color;
+    background: #fff;
+    border: $border-thickness solid #333;
+    border-radius: 20px;
+    box-shadow: 8px 8px 0px rgba(0,0,0,0.05);
 }
 
-.c-tabs__link {
-    font-family: $font-hand;
-    font-size: 1.3rem;
-    color: $primary-color !important;
-    border: 3px solid $primary-color !important;
-    border-bottom: none !important;
-    margin-right: 5px;
-    border-radius: 10px 10px 0 0 !important;
-    &.active {
-        background-color: $accent-color !important;
-        color: white !important;
+/* Tabs Styling - Exact zoals screenshot */
+.nav-tabs {
+    border: none;
+    gap: 5px;
+    
+    .nav-link {
+        border: $border-thickness solid #333 !important;
+        border-radius: 12px 12px 0 0 !important;
+        color: #333;
+        font-family: $font-hand;
+        font-size: 1.2rem;
+        background: #fff;
+        padding: 8px 20px;
+        transition: 0.2s;
+
+        &.active {
+            background-color: $accent-color !important;
+            color: #fff !important;
+            border-bottom: $border-thickness solid $accent-color !important;
+        }
     }
 }
 
+.tab-content {
+    border: $border-thickness solid #333;
+    border-radius: 0 15px 15px 15px;
+    background: #fff;
+    padding: 25px;
+    margin-top: -2.5px;
+}
+
 .c-input-hand {
-    border: 2px solid $primary-color;
+    border: 1.5px solid #333;
     border-radius: 10px;
-    font-family: $font-hand;
-    font-size: 1.1rem;
-    &:focus { box-shadow: 4px 4px 0 $accent-color; border-color: $accent-color; }
+    padding: 8px;
+    &:focus { border-color: $accent-color; box-shadow: none; }
 }
 
-.c-btn--handdrawn {
-    background: $accent-color;
+.c-btn-main {
+    background-color: $accent-color;
     color: white;
-    border: 3px solid $primary-color;
-    border-radius: 12px;
     font-family: $font-hand;
-    font-size: 1.4rem;
-    transition: 0.2s;
-    &:hover { background: $primary-color; transform: translateY(-2px); color: white;}
-}
+    font-size: 1.5rem;
+    border: $border-thickness solid #333;
+    border-radius: 15px;
+    box-shadow: 0 5px 0 #333;
+    padding: 12px;
+    width: 100%;
+    transition: all 0.1s;
 
-.c-order-item {
-    border-bottom: 2px dashed $primary-color;
-    padding: 1.5rem 0;
-    &:last-child { border-bottom: none; }
-    &__room { font-family: $font-hand; font-size: 1.6rem; color: $accent-color; line-height: 1; }
+    &:hover { background-color: darken($accent-color, 5%); transform: translateY(2px); box-shadow: 0 3px 0 #333; }
+    &:active { transform: translateY(5px); box-shadow: none; }
 }
-// #endregion
-
-.u-rotate-tiny { transform: rotate(-2deg); }
